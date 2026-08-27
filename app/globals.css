@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EDEAE0;
+  background-image:
+    linear-gradient(rgba(20, 35, 31, 0.035) 1px, transparent 1px);
+  background-size: 100% 2rem;
+  color: #1B2B26;
+}
+
+.seal-stamp {
+  position: relative;
+}
+
+.ledger-rule {
+  border-top: 1px solid #D3CBB4;
+}
+
+.ref-number::before {
+  content: "রেফ. ";
+  opacity: 0.55;
+}
+
+/* focus visibility */
+:focus-visible {
+  outline: 2px solid #1F5F4F;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
