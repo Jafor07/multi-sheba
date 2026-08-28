@@ -5,6 +5,8 @@ import Link from "next/link";
 import { faqs } from "@/lib/faq";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LangToggle from "@/components/LangToggle";
+import SiteFooter from "@/components/SiteFooter";
+import { siteLinks } from "@/lib/siteConfig";
 
 export default function FaqPage() {
   const { lang, t } = useLanguage();
@@ -53,13 +55,14 @@ export default function FaqPage() {
             {lang === "bn" ? "আরও প্রশ্ন আছে?" : "Still have a question?"}
           </p>
           <a
-            href="https://wa.me/8801000000000"
+            href={siteLinks.whatsapp}
             className="inline-block rounded-sm bg-seal text-paper px-5 py-2.5 font-medium hover:bg-sealDeep"
           >
             {t("nav_whatsapp")}
           </a>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

@@ -56,4 +56,32 @@ export const faqs: FaqItem[] = [
     a_bn: "না। প্রদর্শিত মূল্য শুধু আমাদের সার্ভিস চার্জ। প্রক্রিয়ার সরকারি ফি থাকলে তা আলাদা, এবং কাজ শুরুর আগে আমরা সঠিক পরিমাণ জানিয়ে দেব।",
     keywords: ["government fee", "official fee", "included", "সরকারি ফি", "ফি"],
   },
+  {
+    q: "What is your refund and cancellation policy?",
+    q_bn: "রিফান্ড ও অর্ডার বাতিলের নীতি কী?",
+    a: "If Multi Sheba cannot complete a service, a refund will be considered. Customer errors or cancellations after processing starts may not qualify. See our full Refund & Cancellation Policy.",
+    a_bn: "Multi Sheba-এর কারণে সেবা সম্পন্ন না হলে রিফান্ড বিবেচনা করা হবে। গ্রাহকের ভুল বা কাজ শুরু হওয়ার পর বাতিল করলে রিফান্ড নাও প্রযোজ্য হতে পারে। বিস্তারিত রিফান্ড ও বাতিল নীতি পাতায় দেখুন।",
+    keywords: ["refund", "cancel", "cancellation", "ফেরত", "রিফান্ড", "বাতিল"],
+  },
+  {
+    q: "What happens if an application is rejected by a government office?",
+    q_bn: "সরকারি অফিস আবেদন প্রত্যাখ্যান করলে কী হবে?",
+    a: "Government offices make the final decision. We can explain the stated reason and advise on next steps, but approval is not guaranteed by our service charge.",
+    a_bn: "সরকারি অফিসই চূড়ান্ত সিদ্ধান্ত নেয়। প্রত্যাখ্যানের কারণ জানালে আমরা পরবর্তী করণীয় বুঝিয়ে দিতে পারি, তবে সার্ভিস চার্জের বিনিময়ে অনুমোদনের নিশ্চয়তা দেওয়া হয় না।",
+    keywords: ["rejected", "reject", "government office", "প্রত্যাখ্যান", "বাতিল আবেদন"],
+  },
+  {
+    q: "How long are uploaded files retained?",
+    q_bn: "আপলোড করা ফাইল কতদিন রাখা হয়?",
+    a: "Files are retained only as long as needed to complete the order, then deleted when they are no longer required.",
+    a_bn: "অর্ডার সম্পন্ন করার জন্য যতদিন প্রয়োজন ততদিন ফাইল রাখা হয়। প্রয়োজন শেষ হলে সেগুলো মুছে ফেলা হয়।",
+    keywords: ["retention", "stored", "delete", "document", "সংরক্ষণ", "মুছে", "ডকুমেন্ট"],
+  },
+  {
+    q: "Where do you offer pickup and courier delivery?",
+    q_bn: "কোথায় pickup ও courier delivery পাওয়া যায়?",
+    a: "Counter pickup is available at College Road, Kashinagar. Courier currently covers Kashinagar and nearby areas; confirm your address while ordering.",
+    a_bn: "কলেজ রোড, কাশীনগার কাউন্টার থেকে pickup করা যায়। কুরিয়ার বর্তমানে কাশীনগর ও আশপাশের এলাকায় পাওয়া যায়; অর্ডারের সময় ঠিকানা নিশ্চিত করুন।",
+    keywords: ["delivery", "pickup", "courier", "area", "ডেলিভারি", "কুরিয়ার", "এলাকা"],
+  },
 ];

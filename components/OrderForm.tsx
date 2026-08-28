@@ -4,10 +4,11 @@ import { useState } from "react";
 import { getBrowserSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Service } from "@/lib/services";
+import { siteConfig } from "@/lib/siteConfig";
 
 type Step = "form" | "payment" | "done";
 
-const PAYMENT_NUMBER = "01XXXXXXXXX"; // TODO: replace with the real bKash/Nagad merchant number
+const PAYMENT_NUMBER = siteConfig.phone;
 
 export default function OrderForm({ service }: { service: Service }) {
   const { lang, t } = useLanguage();
@@ -157,6 +158,10 @@ export default function OrderForm({ service }: { service: Service }) {
             {t("payment_instruction_3")} <span className="font-mono">{refNumber}</span> -{" "}
             {t("payment_instruction_4")}
           </p>
+          <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-seal">
+            <span className="rounded-full border border-seal/20 bg-mint px-3 py-1">✓ bKash / Nagad</span>
+            <span className="rounded-full border border-seal/20 bg-mint px-3 py-1">✓ {lang === "bn" ? "ম্যানুয়ালি যাচাই করা হয়" : "Manually verified"}</span>
+          </div>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1" htmlFor="txn">

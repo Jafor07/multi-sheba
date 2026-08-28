@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { faqs } from "@/lib/faq";
 import { services } from "@/lib/services";
+import { siteLinks } from "@/lib/siteConfig";
 
 interface Message {
   from: "bot" | "user";
@@ -12,7 +13,7 @@ interface Message {
   serviceLink?: { slug: string; label: string };
 }
 
-const WHATSAPP_NUMBER = "8801000000000"; // TODO: replace with the real business number
+const WHATSAPP_NUMBER = siteLinks.whatsapp.replace("https://wa.me/", "");
 
 function findAnswer(input: string, lang: "en" | "bn"): Message {
   const q = input.toLowerCase().trim();
