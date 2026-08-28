@@ -5,13 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#14231F",
-        paper: "#F4F0E6",
-        seal: "#1F5F4F",
-        sealDeep: "#123B31",
-        brass: "#B08D4F",
-        clay: "#B5482A",
-        line: "#D8D0BC",
+        ink: "#19252A",
+        paper: "#F8FAF7",
+        seal: "#087F6E",
+        sealDeep: "#056052",
+        brass: "#D58B32",
+        clay: "#D35F4D",
+        line: "#DDE7E1",
+        mint: "#E2F3EC",
+        sky: "#E7F1F6",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

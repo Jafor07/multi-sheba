@@ -5,7 +5,7 @@ import { getServiceBySlug } from "@/lib/services";
 export async function POST(req: NextRequest) {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     return NextResponse.json(
-      { error: "Server is not configured yet — Supabase env vars are missing. See .env.example." },
+      { error: "Server is not configured yet - Supabase env vars are missing. See .env.example." },
       { status: 500 }
     );
   }

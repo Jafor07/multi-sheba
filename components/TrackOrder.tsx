@@ -75,7 +75,7 @@ export default function TrackOrder({
     <div className="space-y-6">
       {paymentStatus === "success" && (
         <div className="border border-seal/40 bg-seal/5 rounded-sm p-4 text-sm">
-          ✓ Payment received — your order is now being processed.
+          ✓ Payment received - your order is now being processed.
         </div>
       )}
       {paymentStatus === "cancelled" && (

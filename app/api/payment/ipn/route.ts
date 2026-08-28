@@ -4,7 +4,7 @@ import { validatePayment } from "@/lib/payment";
 import { sendOrderStatusNotification } from "@/lib/notifications";
 
 // POST /api/payment/ipn
-// SSLCommerz Instant Payment Notification (IPN) — called by the gateway on
+// SSLCommerz Instant Payment Notification (IPN) - called by the gateway on
 // payment success/failure. We verify with the gateway and mark the order paid.
 export async function POST(req: NextRequest) {
   const form = await req.formData();

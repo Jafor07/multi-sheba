@@ -2,7 +2,7 @@
 // manual bKash/Nagad txn-ID flow. It's deliberately gated: until you've set
 // SSLCOMMERZ_STORE_ID and SSLCOMMERZ_STORE_PASSWD (which require a trade
 // licence + DBID), every function here reports "disabled" and the order form
-// falls back to the manual flow — so you can keep launching on the free tiers
+// falls back to the manual flow - so you can keep launching on the free tiers
 // without any code change when the merchant account is approved.
 //
 // We hit SSLCommerz's HTTP API directly with fetch(), so no SDK dependency.
@@ -30,13 +30,13 @@ function paymentEndpoint(): string {
     : "https://securepay.sslcommerz.com/gwprocess/v4/api.php";
 }
 
-/** Server-side only — never exposed to the browser. */
+/** Server-side only - never exposed to the browser. */
 function appBaseUrl(): string {
   return process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 }
 
 interface PaymentInput {
-  refNumber: string; // tran_id (max 30 chars) — our refs are within that
+  refNumber: string; // tran_id (max 30 chars) - our refs are within that
   amount: number; // BDT
   phone: string;
   productName: string;

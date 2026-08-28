@@ -24,7 +24,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Multi Sheba — সব সেবা এক জায়গায়",
+  title: "Multi Sheba - সব সেবা এক জায়গায়",
   description:
     "Order government paperwork, applications, and document services online. One counter, every service, tracked from order to delivery.",
 };

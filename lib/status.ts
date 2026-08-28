@@ -17,7 +17,7 @@ export type OrderStatus = (typeof ORDER_STATUSES)[number];
 export const STATUS_LABELS: Record<OrderStatus, string> = {
   awaiting_payment: "Awaiting payment",
   pending_verification: "Payment under review",
-  paid: "Paid — verification complete",
+  paid: "Paid - verification complete",
   processing: "In progress",
   delivered: "Delivered",
   cancelled: "Cancelled",

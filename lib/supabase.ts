@@ -11,7 +11,7 @@ export function isSupabaseConfigured() {
   );
 }
 
-// Public client — safe for the browser, uses the anon key which only
+// Public client - safe for the browser, uses the anon key which only
 // has the permissions you grant it via Supabase Row Level Security (RLS).
 export function getBrowserSupabase() {
   return createClient(
@@ -20,7 +20,7 @@ export function getBrowserSupabase() {
   );
 }
 
-// Server client — used inside API routes / server components only.
+// Server client - used inside API routes / server components only.
 // Uses the service role key, which bypasses RLS, so it must never be
 // exposed to the browser. Only import this file from server-side code.
 export function getServerSupabase() {

@@ -39,8 +39,8 @@ export default function OrderForm({ service }: { service: Service }) {
     if (!isSupabaseConfigured()) {
       throw new Error(
         lang === "bn"
-          ? "সার্ভার এখনো Supabase দিয়ে কনফিগার করা হয়নি — সাইট মালিকের সাথে যোগাযোগ করুন।"
-          : "This site isn't connected to storage yet (Supabase isn't configured). Contact the site owner — see .env.example."
+          ? "সার্ভার এখনো Supabase দিয়ে কনফিগার করা হয়নি - সাইট মালিকের সাথে যোগাযোগ করুন।"
+          : "This site isn't connected to storage yet (Supabase isn't configured). Contact the site owner - see .env.example."
       );
     }
 
@@ -154,7 +154,7 @@ export default function OrderForm({ service }: { service: Service }) {
           <p className="text-sm leading-relaxed">
             {t("payment_instruction_1")} <strong>৳{service.price}</strong>{" "}
             {t("payment_instruction_2")} <span className="font-mono">{PAYMENT_NUMBER}</span>,{" "}
-            {t("payment_instruction_3")} <span className="font-mono">{refNumber}</span> —{" "}
+            {t("payment_instruction_3")} <span className="font-mono">{refNumber}</span> -{" "}
             {t("payment_instruction_4")}
           </p>
         </div>

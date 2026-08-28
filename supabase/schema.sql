@@ -20,13 +20,13 @@ create index if not exists orders_created_at_idx on orders (created_at desc);
 -- Row Level Security: the browser (anon key) should NEVER read/write orders
 -- directly. All order reads/writes go through the Next.js API routes using
 -- the service role key, which bypasses RLS. So we enable RLS and add no
--- public policies — this locks the table to server-side access only.
+-- public policies - this locks the table to server-side access only.
 alter table orders enable row level security;
 
 -- ── Storage bucket for uploaded documents (NID copies, photos, etc.) ──
 -- Do this in the Supabase Dashboard, not SQL:
 -- 1. Go to Storage → Create a new bucket named "order-documents"
--- 2. Set it to "Public" (simplest for MVP — files are only discoverable
+-- 2. Set it to "Public" (simplest for MVP - files are only discoverable
 --    if someone has the exact URL, which is a random path + timestamp).
 --    For stricter privacy later, make it private and generate signed URLs
 --    from the server instead.

@@ -31,7 +31,7 @@ export interface Service {
 // Your original list had 68 numbered items. Many were duplicates or near
 // duplicates of each other (e.g. "Job Application Submission" and
 // "Government Job Application" are the same form). Below, every one of
-// the 68 is covered — some as their own service, some consolidated into
+// the 68 is covered - some as their own service, some consolidated into
 // one form that asks which variant you need. See README for the mapping.
 
 export const categories = [
@@ -101,7 +101,7 @@ function designFields(): ServiceField[] {
 }
 
 export const services: Service[] = [
-  // ══ Printing & Document Services (physical — pickup or courier) ══
+  // ══ Printing & Document Services (physical - pickup or courier) ══
   {
     slug: "birth-cert-printing",
     refPrefix: "BCP",
@@ -172,8 +172,8 @@ export const services: Service[] = [
     price: 10,
     turnaround: "Same day",
     turnaround_bn: "একই দিনে",
-    summary: "Bring or courier your physical papers to us — we scan them into a clean PDF and send it back.",
-    summary_bn: "আপনার কাগজপত্র আমাদের কাছে দিন — আমরা তা স্ক্যান করে পরিষ্কার পিডিএফ বানিয়ে ফেরত পাঠাব।",
+    summary: "Bring or courier your physical papers to us - we scan them into a clean PDF and send it back.",
+    summary_bn: "আপনার কাগজপত্র আমাদের কাছে দিন - আমরা তা স্ক্যান করে পরিষ্কার পিডিএফ বানিয়ে ফেরত পাঠাব।",
     deliveryMode: "physical",
     fields: physicalFields("What are you sending? (describe)", "কী পাঠাচ্ছেন তা লিখুন", []),
   },
@@ -353,7 +353,7 @@ export const services: Service[] = [
   },
 
   // ══ Government & Public Services (digital application; some require an
-  //    office visit that we don't cover — we're upfront about that in the summary) ══
+  //    office visit that we don't cover - we're upfront about that in the summary) ══
   {
     slug: "birth-reg-verification",
     refPrefix: "BRV",
@@ -413,8 +413,8 @@ export const services: Service[] = [
     price: 30,
     turnaround: "Same day",
     turnaround_bn: "একই দিনে",
-    summary: "We download your NID and can print or photocopy it — choose below.",
-    summary_bn: "আমরা আপনার এনআইডি ডাউনলোড করে প্রিন্ট বা ফটোকপি করে দিতে পারি — নিচে বেছে নিন।",
+    summary: "We download your NID and can print or photocopy it - choose below.",
+    summary_bn: "আমরা আপনার এনআইডি ডাউনলোড করে প্রিন্ট বা ফটোকপি করে দিতে পারি - নিচে বেছে নিন।",
     deliveryMode: "physical",
     fields: physicalFields("Upload NID number / slip / old copy", "এনআইডি নম্বর / স্লিপ / পুরনো কপি আপলোড করুন", [
       { id: "what_you_need", label: "What do you need?", label_bn: "কী প্রয়োজন?", type: "select", required: true, options: ["Digital download only", "Printed copy", "Photocopy"], options_bn: ["শুধু ডিজিটাল ডাউনলোড", "প্রিন্ট কপি", "ফটোকপি"] },
@@ -642,7 +642,7 @@ export const services: Service[] = [
     price: 100,
     turnaround: "1–2 days",
     turnaround_bn: "১-২ দিন",
-    summary: "Board-related online tasks — migration, verification requests, and similar — handled for you.",
+    summary: "Board-related online tasks - migration, verification requests, and similar - handled for you.",
     summary_bn: "মাইগ্রেশন, যাচাই আবেদনসহ বোর্ড-সংক্রান্ত অনলাইন কাজ আমরা করে দেব।",
     deliveryMode: "digital",
     fields: applicationFields("What board service do you need?", "কোন বোর্ড সেবা প্রয়োজন?"),
@@ -936,7 +936,7 @@ export const services: Service[] = [
     price: 30,
     turnaround: "Within hours",
     turnaround_bn: "কয়েক ঘণ্টার মধ্যে",
-    summary: "Any government/institutional portal document you're struggling to download — we get it and send it to you.",
+    summary: "Any government/institutional portal document you're struggling to download - we get it and send it to you.",
     summary_bn: "যেকোনো সরকারি/প্রাতিষ্ঠানিক পোর্টাল থেকে ডাউনলোড করতে সমস্যা হলে, আমরা ডাউনলোড করে পাঠিয়ে দেব।",
     deliveryMode: "digital",
     fields: applicationFields("Which document, from which site?", "কোন ডকুমেন্ট, কোন সাইট থেকে?"),

@@ -30,7 +30,7 @@ export default function AdminLogin() {
   return (
     <main className="min-h-screen flex items-center justify-center">
       <form onSubmit={handleSubmit} className="w-full max-w-xs border border-line p-6 rounded-sm bg-paper">
-        <h1 className="font-display text-xl mb-4">Admin — Multi Sheba</h1>
+        <h1 className="font-display text-xl mb-4">Admin - Multi Sheba</h1>
         <label className="block text-sm font-medium mb-1" htmlFor="password">
           Password
         </label>

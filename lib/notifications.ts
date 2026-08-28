@@ -9,7 +9,7 @@
 //              template is approved Twilio will reject outbound WhatsApp, so
 //              this stays off by default.
 //
-// If none of the env vars are set, every function is a safe no-op — the admin
+// If none of the env vars are set, every function is a safe no-op - the admin
 // dashboard and order flow keep working, we just don't send anything.
 
 import { orderStatusMessage } from "@/lib/status";
@@ -43,7 +43,7 @@ async function sendTwilioSms(input: NotifyInput): Promise<void> {
     : input.phone;
 
   const text = [
-    `Multi Sheba — Order ${input.refNumber} (${input.serviceName})`,
+    `Multi Sheba - Order ${input.refNumber} (${input.serviceName})`,
     orderStatusMessage(input.status),
     `Track it: ${trackingUrl(input.refNumber)}`,
   ].join("\n");

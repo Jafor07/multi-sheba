@@ -32,7 +32,7 @@ export default function AdminOrderRow({ order }: { order: any }) {
       <td className="py-3 pr-4">{order.service_name}</td>
       <td className="py-3 pr-4">{order.phone}</td>
       <td className="py-3 pr-4 font-mono">৳{order.price}</td>
-      <td className="py-3 pr-4 font-mono text-xs">{order.txn_id || "—"}</td>
+      <td className="py-3 pr-4 font-mono text-xs">{order.txn_id || "-"}</td>
       <td className="py-3 pr-4">
         {order.file_urls &&
           Object.entries(order.file_urls as Record<string, string>).map(([k, url]) => (

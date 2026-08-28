@@ -13,11 +13,30 @@ html {
 }
 
 body {
-  background-color: #EDEAE0;
+  background-color: #F8FAF7;
   background-image:
-    linear-gradient(rgba(20, 35, 31, 0.035) 1px, transparent 1px);
-  background-size: 100% 2rem;
-  color: #1B2B26;
+    linear-gradient(rgba(8, 127, 110, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 127, 110, 0.045) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+  color: #19252A;
+}
+
+::selection {
+  background: #CDEBDF;
+  color: #056052;
+}
+
+.soft-panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #DDE7E1;
+  box-shadow: 0 18px 50px rgba(25, 37, 42, 0.07);
+}
+
+.hero-wash {
+  background:
+    radial-gradient(circle at 90% 15%, rgba(213, 139, 50, 0.22), transparent 28%),
+    radial-gradient(circle at 5% 90%, rgba(8, 127, 110, 0.16), transparent 32%),
+    linear-gradient(135deg, #F4FBF7 0%, #FFFFFF 55%, #F3F7F8 100%);
 }
 
 .seal-stamp {
@@ -25,7 +44,7 @@ body {
 }
 
 .ledger-rule {
-  border-top: 1px solid #D3CBB4;
+  border-top: 1px solid #DDE7E1;
 }
 
 .ref-number::before {
