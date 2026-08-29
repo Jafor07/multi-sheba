@@ -27,8 +27,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://multisheba.netlify.app"),
   title: "Multi Sheba - সব সেবা এক জায়গায়",
   description:
-    "Order government paperwork, applications, and document services online. One counter, every service, tracked from order to delivery.",
-  openGraph: {
+    "Order government paperwork, applications, and document services online. One counter, every service, tracked from order to delivery.",  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon-32x32.png",
+  },  openGraph: {
     title: "Multi Sheba - সব সেবা এক জায়গায়",
     description: "সরকারি কাগজপত্র, আবেদন, প্রিন্টিং ও বিল পেমেন্টের সেবা এক জায়গায়।",
     type: "website",

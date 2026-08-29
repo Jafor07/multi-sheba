@@ -3,7 +3,7 @@ import { Wallet, Clock, ListChecks, TrendingUp } from "lucide-react";
 import { getServerSupabase } from "@/lib/supabase";
 import { computeOrderStats } from "@/lib/orderStats";
 import AdminLogin from "@/components/AdminLogin";
-import AdminOrderRow from "@/components/AdminOrderRow";
+import AdminOrdersTable from "@/components/AdminOrdersTable";
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +33,7 @@ export default async function AdminPage() {
     {
       label: "Awaiting verification",
       value: `৳${stats.pendingVerificationValue}`,
-      hint: `${stats.pendingVerificationCount} order(s) - needs your review`,
+      hint: `${stats.pendingVerificationCount} order(s) — needs your review`,
       icon: Clock,
       solid: "bg-amber-500 text-white",
     },
@@ -82,28 +82,8 @@ export default async function AdminPage() {
           ))}
         </div>
 
-        <div className="bg-surface border border-border rounded-2xl shadow-card overflow-x-auto">
-          {error && <p className="text-rose-600 p-5">Could not load orders: {error.message}</p>}
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="text-left border-b border-border text-xs uppercase tracking-wide text-ink/50">
-                <th className="py-3 px-4">Ref</th>
-                <th className="py-3 px-4">Service</th>
-                <th className="py-3 px-4">Phone</th>
-                <th className="py-3 px-4">Charge</th>
-                <th className="py-3 px-4">Txn ID</th>
-                <th className="py-3 px-4">Files</th>
-                <th className="py-3 px-4">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {orders?.map((o) => (
-                <AdminOrderRow key={o.ref_number} order={o} />
-              ))}
-            </tbody>
-          </table>
-          {orders?.length === 0 && <p className="text-ink/50 p-6">No orders yet.</p>}
-        </div>
+        {error && <p className="text-rose-600 mb-4">Could not load orders: {error.message}</p>}
+        <AdminOrdersTable orders={orders ?? []} />
       </section>
     </main>
   );
